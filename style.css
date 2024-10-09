@@ -35,7 +35,7 @@ body {
 .container {
     text-align: center;
     padding: 50px 0;
-    flex: 1; 
+    flex: 1;
     margin: 0;
 }
 
@@ -80,10 +80,27 @@ a {
 
 .app {
     position: relative;
-    overflow: hidden;
+    overflow: hidden; /* Prevent overflow */
     width: 210px;
     height: 210px;
     margin: 0 auto;
+    padding: 0; /* Ensure no padding */
+    background: white;
+    border-radius: 30px; /* Add border-radius */
+    text-align: center;
+    color: black;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Default shadow */
+}
+
+.app:hover {
+    transform: scale(1.1); /* Scale on hover */
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow */
+    background-color: #1a3b5d; /* Background color change on hover */
 }
 
 .overlay {
@@ -111,36 +128,16 @@ a {
     text-align: center;
 }
 
-.app-grid .app {
-    background: white;
-    border-radius: 30px;
-    padding: 25px;
-    text-align: center;
-    color: black;
-    width: 200px;
-    height: 200px;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-}
-
-.app-grid .app img {
+.app img {
     width: 90px;
     height: 90px;
+    border-radius: 50%; /* Ensure circular image if required */
 }
 
-.app-grid .app p {
+.app p {
     margin: 10px 0 0;
     font-size: 16px;
     font-weight: 700;
-}
-
-.app-grid .app:hover {
-    transform: scale(1.1);
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
 }
 
 .footer {
@@ -172,26 +169,27 @@ a {
     margin-bottom: 20px;
 }
 
+.footer .sitemap .sitemap-columns {
+    display: flex;
+    justify-content: space-between;
+}
+
 .footer .sitemap ul {
     list-style: none;
     padding: 0;
     margin: 0;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
+    width: 48%;
 }
 
 .footer .sitemap ul li {
-    width: calc(50% - 10px);
     margin-bottom: 10px;
-    box-sizing: border-box;
 }
 
 .footer .sitemap ul li a {
     color: white;
     text-decoration: none;
     display: block;
-    font-size: 16px;
+    font-size: 14px;
     line-height: 1.4;
     white-space: nowrap;
     overflow: hidden;
@@ -228,8 +226,13 @@ a {
         height: 200px;
     }
 
-    .footer .sitemap ul li {
+    .footer .sitemap .sitemap-columns {
+        flex-direction: column;
+    }
+
+    .footer .sitemap ul {
         width: 100%;
+        margin-bottom: 20px;
     }
 }
 
