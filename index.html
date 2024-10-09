@@ -29,20 +29,6 @@
         </div>
       </div>
 
-    <script>
-        $(document).ready(function() {
-            // Show the modal when the page loads
-            $('#myModal').modal('show');
-        });
-
-        $('#myModal').on('shown.bs.modal', function () {
-            $('#myInput').trigger('focus');
-        });
-    </script>
-
-
-    </script>
-
     <div class="wrapper">
         <div class="container">
             <img alt="Bapperida Logo" height="100" src="img/Bapperida-removebg-preview 3.png" width="100"/>
@@ -160,12 +146,15 @@
                 <div class="sitemap">
                     <h3>> SITEMAP</h3>
                     <ul>
+                        <!-- 1st Column -->
                         <li><a href="#">Beranda</a></li>
                         <li><a href="#">Dokumen Perencanaan</a></li>
                         <li><a href="#">Standar Pelayanan</a></li>
                         <li><a href="#">Agenda</a></li>
                         <li><a href="#">Kontak</a></li>
-                        <li><a href="#">Beranda</a></li>
+
+                        <!-- 2nd Column -->
+                        <li><a href="#">Profil</a></li>
                         <li><a href="#">Dokumen Litbang</a></li>
                         <li><a href="#">Rencana Kinerja Bapperida</a></li>
                         <li><a href="#">Galeri Kegiatan</a></li>
@@ -177,15 +166,20 @@
     </div>
 
     <script>
-    $(document).ready(function() {
-        // Show the modal when the page loads
-        $('#myModal').modal('show');
-
-        $('#myModal').on('hidden.bs.modal', function () {
-            $('body').removeClass('modal-open');
+        $(document).ready(function() {
+            // Show the modal when the page loads
+            $('#myModal').modal('show');
+    
+            $('#myModal').on('shown.bs.modal', function () {
+                $('#myInput').trigger('focus');
+            });
+    
+            $('#myModal').on('hidden.bs.modal', function () {
+                $('body').removeClass('modal-open');
+            });
         });
-    });
     </script>
+    
 
 </body>
 </html>

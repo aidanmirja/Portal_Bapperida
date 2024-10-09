@@ -25,15 +25,19 @@
         }
 
         body {
-            background: url(img/Group\ 7.png) no-repeat center center fixed;
-            background-size: cover;
+            background: url(img/Group\ 7.png) no-repeat center center fixed; /* Keep your background image */
+            background-size: cover; /* Ensures the background image covers the entire area */
             color: white;
+            margin: 0; /* Ensure there's no default margin */
+            padding: 0; /* Ensure there's no default padding */
         }
+        
 
         .container {
             text-align: center;
-            padding: 50px 0;
+            padding: 50px 0; /* This is fine for content padding */
             flex: 1; 
+            margin: 0; /* No margin on the container */
         }
         
         .responsive-img {
@@ -143,10 +147,12 @@
 
         .footer {
             color: white;
-            border-radius: 30px 30px 0px;
+            /* border-radius: 30px 30px 0px; */
             background: #1a3b5d;
             padding: 20px;
             display: flex;
+            justify-content: space-between; /* Use space-between for equal spacing */
+            flex-wrap: wrap;
             justify-content: center; /* Center the footer content */
         }        
         
@@ -160,8 +166,9 @@
         
         .footer .contact, .footer .map, .footer .sitemap {
             flex: 1;
-            min-width: 300px;
+            min-width: 250px; /* Set minimum width for items */
             margin: 10px; /* Adjust margin as needed */
+            box-sizing: border-box;
         }
         
         .footer .contact h3, .footer .map h3, .footer .sitemap h3 {
