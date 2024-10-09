@@ -147,69 +147,77 @@
             background: #1a3b5d;
             padding: 20px;
             display: flex;
-            justify-content: space-around;
-            flex-wrap: wrap;
+            justify-content: center; /* Center the footer content */
+        }        
+        
+        .footer-container {
+            display: flex;
+            justify-content: space-around; /* Space between items */
+            flex-wrap: wrap; /* Allow wrapping on smaller screens */
+            max-width: 1300px; /* Limit max width */
+            width: 100%; /* Full width */
         }
-
+        
         .footer .contact, .footer .map, .footer .sitemap {
             flex: 1;
-            min-width: 200px;
-            margin: 10px;
-            margin-right: 10px;
+            min-width: 300px;
+            margin: 10px; /* Adjust margin as needed */
         }
-
+        
         .footer .contact h3, .footer .map h3, .footer .sitemap h3 {
             font-size: 24px;
             font-weight: 600;
             margin-bottom: 10px;
         }
-
-        .footer .contact p, .footer .sitemap ul {
-            margin: 5px 0;
-            font-size: 17px;
-        }
-
+        
         .footer .sitemap ul {
             list-style: none;
             padding: 0;
-            columns: 2;
+            columns: 2; /* Use columns for sitemap */
         }
-
+        
         .footer .sitemap ul li {
-            margin: 5px 0;
+            margin: 0px 0px 8px 0px;
         }
-
+        
         .footer .sitemap ul li a {
             color: white;
             text-decoration: none;
         }
-
+        
         .footer .sitemap ul li a:hover {
             text-decoration: underline;
         }
-
+        
         .footer .map img {
+            margin-right: 10px;
             width: 100%;
             border-radius: 10px;
         }
-
+        
         .footer .contact .logos {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
+        
         .footer .contact .logos img {
             width: 70px;
             height: 70px;
         }
-
+        
         .footer .contact .logos span {
             display: flex;
             align-items: center;
             gap: 10px;
         }
-
+        
+        .responsive-map {
+            margin-top: 5px;
+            width: 100%;
+            height: 200px; /* Adjust height as needed */
+        }
+        
         @media (max-width: 768px) {
             .app-grid {
                 grid-template-columns: repeat(2, minmax(140px, 1fr));
@@ -221,24 +229,11 @@
             .app-grid .app {
                 width: 100%;
                 max-width: 210px;
-                max-height: 160px;
+                max-height: 150px;
                 margin-bottom: 20px;
             }
         }
 
-        .map-container {
-            display: flex;
-            flex-direction: column; /* Mengatur peta dan judul secara vertikal */
-            align-items: center;    /* Menyelaraskan konten di tengah */
-            width: 100%;            /* Memastikan kontainer peta mengisi lebar penuh */
-        }
-        
-        .responsive-map {
-            width: 400px; /* Lebar tetap */
-            height: 200px; /* Tinggi tetap */
-            border: 0;    /* Menghilangkan border */
-        }
-        
         @media (max-width: 768px) {
             .responsive-map {
                 width: 100%; /* Lebar responsif untuk perangkat lebih kecil */
