@@ -242,7 +242,9 @@ a {
     }
 }
 
-body.modal-open {
-    overflow: hidden;
-    padding-right: 15px;
-}
+        body.modal-open {
+            overflow: hidden; /* Menyembunyikan overflow */
+            padding-right: 15px; /* Menghindari pergeseran konten */
+        }
+        
+        
