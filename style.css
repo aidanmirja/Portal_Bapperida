@@ -1,240 +1,245 @@
-        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
-    
-        html, body {
-            height: 100%;
-            margin: 0;
-        }
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@100;300;400;500;600;700&display=swap');
 
-        .wrapper {
-            display: flex;
-            flex-direction: column;
-            min-height: 100vh;
-        }
+html, body {
+    height: 100%;
+    margin: 0;
+}
 
-        * {
-            font-family: "Poppins", sans-serif;
-        }
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+}
 
-        .modal-header {
-            padding: 0.5rem;  /* Mengurangi padding header */
-        }
+* {
+    font-family: "Poppins", sans-serif;
+}
 
-        .modal-body img {
-            max-width: 100%;  /* Gambar akan menyesuaikan lebar modal */
-            height: auto;     /* Tinggi akan disesuaikan secara proporsional */
-        }
+.modal-header {
+    padding: 0.5rem;
+}
 
-        body {
-            background: url(img/Group\ 7.png) no-repeat center center fixed; /* Keep your background image */
-            background-size: cover; /* Ensures the background image covers the entire area */
-            color: white;
-            margin: 0; /* Ensure there's no default margin */
-            padding: 0; /* Ensure there's no default padding */
-        }
-        
+.modal-body img {
+    max-width: 100%;
+    height: auto;
+}
 
-        .container {
-            text-align: center;
-            padding: 50px 0; /* This is fine for content padding */
-            flex: 1; 
-            margin: 0; /* No margin on the container */
-        }
-        
-        .responsive-img {
-            width: 100%;       /* Memastikan gambar mengambil 100% dari lebar kontainer */
-            height: auto;      /* Mempertahankan rasio aspek gambar */
-            max-width: 400px;  /* Mengatur lebar maksimum agar sesuai dengan ukuran yang diinginkan */
-            margin-bottom: 15px; /* Jarak bawah antar gambar */
-        }
-        
+body {
+    background: url(img/bg-web.png) no-repeat center center fixed;
+    background-size: cover;
+    color: white;
+    margin: 0;
+    padding: 0;
+}
 
-        .container  img{
-            margin-bottom: 15px;
-        }
+.container {
+    text-align: center;
+    padding: 50px 0;
+    flex: 1; 
+    margin: 0;
+}
 
-        .container h1 {
-            color: white;
-            margin: 0;
-            font-weight:700;
-            font-size: 28px;
-        }
+.responsive-img {
+    width: 100%;
+    height: auto;
+    max-width: 400px;
+    margin-bottom: 15px;
+}
 
-        .container h2 {
-            color: white;
-            margin: 10px 0 40px;
-            font-size: 24px;
-        }
+.container img {
+    margin-bottom: 15px;
+}
 
-        a {
-            text-decoration: none; 
-            color: black; 
-        }
+.container h1 {
+    color: white;
+    margin: 0;
+    font-weight: 700;
+    font-size: 28px;
+}
 
-        .app-grid {
-            display: grid;
-            grid-template-columns: repeat(4, 1fr);
-            gap: 30px;
-            justify-content: center; /* Center the grid */
-            padding: 0 20px;
-            max-width: 800px; /* Set max width to prevent overflowing */
-            margin: 0 auto; /* Center the grid */
-        }
-    
-        .app {
-            position: relative;
-            overflow: hidden;
-            width: 210px; /* Fixed width */
-            height: 210px; /* Fixed height */
-            margin: 0 auto; /* Center each app box */
-        }
+.container h2 {
+    color: white;
+    margin: 10px 0 40px;
+    font-size: 24px;
+}
 
-        .overlay {
-            position: absolute;
-            top: 0;
-            left: 0;
-            right: 0;
-            bottom: 0;
-            background: rgba(0, 0, 0, 0.85); /* Darker semi-transparent background */
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            opacity: 0; /* Initially hidden */
-            transition: opacity 0.3s ease; /* Smooth transition */
-        }
+a {
+    text-decoration: none; 
+    color: black; 
+}
 
-        .app:hover .overlay {
-            opacity: 1; /* Show overlay on hover */
-        }
+.app-grid {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px;
+    justify-content: center;
+    padding: 0 20px;
+    max-width: 800px;
+    margin: 0 auto;
+}
 
-        .description {
-            padding: 10px;
-            color: white; /* Text color for description */
-            font-size: 12px; /* Fixed font size */
-            text-align: center; /* Center align the text */
-        }
+.app {
+    position: relative;
+    overflow: hidden;
+    width: 210px;
+    height: 210px;
+    margin: 0 auto;
+}
 
-        .app-grid .app {
-            background: white;
-            border-radius: 30px;
-            padding: 25px;
-            text-align: center;
-            color: black;
-            width: 200px;
-            height: 200px;
-            display: flex;
-            flex-direction: column;
-            justify-content: center;
-            align-items: center;
-            transition: transform 0.3s ease;
-            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
-        }
+.overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(0, 0, 0, 0.85);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: opacity 0.3s ease;
+}
 
-        .app-grid .app img {
-            width: 90px;
-            height: 90px;
-        }
+.app:hover .overlay {
+    opacity: 1;
+}
 
-        .app-grid .app p {
-            margin: 10px 0 0;
-            font-size: 16px;
-            font-weight: 700;
-        }
+.description {
+    padding: 10px;
+    color: white;
+    font-size: 12px;
+    text-align: center;
+}
 
-        .app-grid .app:hover {
-            transform: scale(1.1);
-            box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
-        }
+.app-grid .app {
+    background: white;
+    border-radius: 30px;
+    padding: 25px;
+    text-align: center;
+    color: black;
+    width: 200px;
+    height: 200px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+}
 
-        .footer {
-            color: white;
-            /* border-radius: 30px 30px 0px; */
-            background: #1a3b5d;
-            padding: 20px;
-            display: flex;
-            justify-content: space-between; /* Use space-between for equal spacing */
-            flex-wrap: wrap;
-            justify-content: center; /* Center the footer content */
-        }        
-        
-        .footer-container {
-            display: flex;
-            justify-content: space-around; /* Space between items */
-            flex-wrap: wrap; /* Allow wrapping on smaller screens */
-            max-width: 1300px; /* Limit max width */
-            width: 100%; /* Full width */
-        }
-        
-        .footer .contact, .footer .map, .footer .sitemap {
-            flex: 1;
-            min-width: 250px; /* Set minimum width for items */
-            margin: 10px; /* Adjust margin as needed */
-            box-sizing: border-box;
-        }
-        
-        .footer .contact h3, .footer .map h3, .footer .sitemap h3 {
-            font-size: 24px;
-            font-weight: 600;
-            margin-bottom: 10px;
-        }
-        
-        .footer .sitemap ul {
-            list-style: none;
-            padding: 0;
-           
-            columns: 2; /* Use columns for sitemap */
-        }
-        
-        .footer .sitemap ul li {
-            margin: 0px 0px 8px 0px;
-        }
-        
-        .footer .sitemap ul li a {
-            color: white;
-            text-decoration: none;
-        }
-        
-        .footer .sitemap ul li a:hover {
-            text-decoration: underline;
-        }
-        
-        .responsive-map {
-            margin-top: 5px;
-            width: 100%;
-            height: 200px; /* Adjust height as needed */
-        }
-        
-        @media (max-width: 768px) {
-            .app-grid {
-                grid-template-columns: repeat(2, minmax(140px, 1fr));
-                justify-content: center;
-                gap: 20px;
-                padding: 0 16px;
-            }
+.app-grid .app img {
+    width: 90px;
+    height: 90px;
+}
 
-            .app-grid .app {
-                width: 100%;
-                max-width: 210px;
-                max-height: 160px;
-                margin-bottom: 20px;
-            }
-        }
+.app-grid .app p {
+    margin: 10px 0 0;
+    font-size: 16px;
+    font-weight: 700;
+}
 
-        @media (max-width: 768px) {
-            .responsive-map {
-                width: 100%; /* Lebar responsif untuk perangkat lebih kecil */
-                height: 200px; /* Tinggi tetap */
-            }
-        }
-        
-        @media (max-width: 480px) {
-            .responsive-map {
-                height: 150px; /* Sesuaikan tinggi untuk perangkat yang lebih kecil */
-            }
-        }
+.app-grid .app:hover {
+    transform: scale(1.1);
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3);
+}
 
-        body.modal-open {
-            overflow: hidden; /* Menyembunyikan overflow */
-            padding-right: 15px; /* Menghindari pergeseran konten */
-        }
-        
-        
+.footer {
+    color: white;
+    background: #1a3b5d;
+    padding: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.footer-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    max-width: 1300px;
+    width: 100%;
+}
+
+.footer .contact, .footer .map, .footer .sitemap {
+    flex: 1;
+    min-width: 250px;
+    margin: 10px;
+    box-sizing: border-box;
+}
+
+.footer .contact h3, .footer .map h3, .footer .sitemap h3 {
+    font-size: 24px;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.footer .sitemap ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.footer .sitemap ul li {
+    width: calc(50% - 10px);
+    margin-bottom: 10px;
+    box-sizing: border-box;
+}
+
+.footer .sitemap ul li a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    font-size: 16px;
+    line-height: 1.4;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+}
+
+.footer .sitemap ul li a:hover {
+    text-decoration: underline;
+}
+
+.responsive-map {
+    margin-top: 5px;
+    width: 100%;
+    height: 200px;
+}
+
+@media (max-width: 768px) {
+    .app-grid {
+        grid-template-columns: repeat(2, minmax(140px, 1fr));
+        justify-content: center;
+        gap: 20px;
+        padding: 0 16px;
+    }
+
+    .app-grid .app {
+        width: 100%;
+        max-width: 210px;
+        max-height: 160px;
+        margin-bottom: 20px;
+    }
+
+    .responsive-map {
+        width: 100%;
+        height: 200px;
+    }
+
+    .footer .sitemap ul li {
+        width: 100%;
+    }
+}
+
+@media (max-width: 480px) {
+    .responsive-map {
+        height: 150px;
+    }
+}
+
+body.modal-open {
+    overflow: hidden;
+    padding-right: 15px;
+}
