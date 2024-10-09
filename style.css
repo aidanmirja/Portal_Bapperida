@@ -173,6 +173,7 @@
         .footer .sitemap ul {
             list-style: none;
             padding: 0;
+           
             columns: 2; /* Use columns for sitemap */
         }
         
@@ -187,29 +188,6 @@
         
         .footer .sitemap ul li a:hover {
             text-decoration: underline;
-        }
-        
-        .footer .map img {
-            margin-right: 10px;
-            width: 100%;
-            border-radius: 10px;
-        }
-        
-        .footer .contact .logos {
-            display: flex;
-            align-items: center;
-            gap: 10px;
-        }
-        
-        .footer .contact .logos img {
-            width: 70px;
-            height: 70px;
-        }
-        
-        .footer .contact .logos span {
-            display: flex;
-            align-items: center;
-            gap: 10px;
         }
         
         .responsive-map {
@@ -229,7 +207,7 @@
             .app-grid .app {
                 width: 100%;
                 max-width: 210px;
-                max-height: 150px;
+                max-height: 160px;
                 margin-bottom: 20px;
             }
         }
