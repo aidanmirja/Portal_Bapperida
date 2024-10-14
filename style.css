@@ -59,7 +59,7 @@ body {
 
 .container h2 {
     color: white;
-    margin: 10px 0 40px;
+    margin: 10px 0 10px;
     font-size: 24px;
 }
 
@@ -70,7 +70,7 @@ a {
 
 .app-grid {
     display: grid;
-    grid-template-columns: repeat(4, 1fr);
+    grid-template-columns: repeat(5, 1fr);
     gap: 30px;
     justify-content: center;
     padding: 0 20px;
@@ -80,13 +80,13 @@ a {
 
 .app {
     position: relative;
-    overflow: hidden; /* Prevent overflow */
+    overflow: hidden;
     width: 210px;
     height: 210px;
     margin: 0 auto;
-    padding: 0; /* Ensure no padding */
+    padding: 0;
     background: white;
-    border-radius: 35px; /* Add border-radius */
+    border-radius: 30px;
     text-align: center;
     color: black;
     display: flex;
@@ -94,13 +94,22 @@ a {
     justify-content: center;
     align-items: center;
     transition: transform 0.3s ease, box-shadow 0.3s ease, background-color 0.3s ease;
-    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Default shadow */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); 
+}
+
+.app a {
+    color: black; 
+    text-decoration: none !important; 
+}
+
+.app a:hover {
+    text-decoration: none; 
 }
 
 .app:hover {
-    transform: scale(1.1); /* Scale on hover */
-    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); /* Enhance shadow */
-    background-color: #1a3b5d; /* Background color change on hover */
+    transform: scale(1.1); 
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.3); 
+    background-color: #1a3b5d; 
 }
 
 .overlay {
@@ -131,13 +140,14 @@ a {
 .app img {
     width: 90px;
     height: 90px;
-    /* border-radius: 50%; Ensure circular image if required */
+    
 }
 
 .app p {
     margin: 10px 0 0;
     font-size: 16px;
     font-weight: 700;
+    color: black;
 }
 
 .footer {
@@ -179,9 +189,6 @@ a {
     padding: 0;
     margin: 0;
     width: 48%;
-
-}.footer .contact p {
-    font-size: 14px;
 }
 
 .footer .sitemap ul li {
@@ -245,9 +252,7 @@ a {
     }
 }
 
-        body.modal-open {
-            overflow: hidden; /* Menyembunyikan overflow */
-            padding-right: 15px; /* Menghindari pergeseran konten */
-        }
-        
-        
+body.modal-open {
+    overflow: hidden;
+    padding-right: 15px;
+}
