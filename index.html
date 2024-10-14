@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Bapperida Kota Bogor</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" integrity="sha384-k6RqeWeci5ZR/Lv4MR0sA0FfDOM1y98j5NzN0Wld2vL8gEzT/6mxLO5c5kE8Sh0Z" crossorigin="anonymous">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet"/>
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
@@ -14,6 +15,7 @@
     </style>
 </head>
 <body>
+    <!-- Modal Beginning -->
     <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
         <div class="modal-dialog" role="document">
           <div class="modal-content">
@@ -28,6 +30,63 @@
           </div>
         </div>
       </div>
+
+    <!-- Modal For Materi -->
+    <div class="modal fade" id="materiModal" tabindex="-1" role="dialog" aria-labelledby="materiModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-md" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h4 class="modal-title" id="materiModalLabel" style="display: inline; margin-left: 10px;">Materi Pengetahuan</h4>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                        <span aria-hidden="true">&times;</span>
+                    </button>
+                </div>
+                <div class="modal-body">
+                    <div class="row">
+                        <div class="col-md-6">
+                            <ul>
+                                <li><i class="fas fa-list"></i> <a href="">Dokumen Perencanaan</a> </li>
+                                <li><i class="fas fa-list"></i> <a href="">Dokumen Litbang</a> </li>
+                            </ul>                       
+                        </div>                                               
+                        <div class="col-md-6">
+                            <ul>
+                                <li><i class="fas fa-list"></i> <a href="">Bahan Paparan </a> </li>
+                            </ul>                      
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+        <!-- Modal For SPM -->
+        <div class="modal fade" id="materiModal2" tabindex="-1" role="dialog" aria-labelledby="materiModalLabel" aria-hidden="true">
+            <div class="modal-dialog modal-md" role="document">
+                <div class="modal-content">
+                    <div class="modal-header">
+                        <h4 class="modal-title" id="materiModalLabel" style="display: inline; margin-left: 10px;">Materi Pengetahuan</h4>
+                        <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                            <span aria-hidden="true">&times;</span>
+                        </button>
+                    </div>
+                    <div class="modal-body">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><i class="fas fa-list"></i> <a href="">SKM</a> </li>
+                                </ul>                       
+                            </div>                                               
+                            <div class="col-md-6">
+                                <ul>
+                                    <li><i class="fas fa-list"></i> <a href="">SPAK</a> </li>
+                                </ul>                      
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
 
     <div class="wrapper">
         <div class="container">
@@ -93,7 +152,7 @@
                     </a>
                 </div>
                 <div class="app">
-                    <a href="https://bkad.kotabogor.go.id/ikm/tamu" target="_blank">
+                    <a href="#" target="_blank" data-toggle="modal" data-target="#materiModal">
                         <img alt="Bia Icon" height="60" src="img/OIP-removebg-preview.png" width="160"/>
                         <p>MATERI PENGETAHUAN</p>
                         <div class="overlay">
@@ -102,7 +161,7 @@
                     </a>
                 </div>
                 <div class="app">
-                    <a href="https://bkad.kotabogor.go.id/survei-persepsi-korupsi" target="_blank">
+                    <a href="#" target="_blank" data-toggle="modal" data-target="#materiModal2">
                         <img alt="Bia Icon" height="60" src="img/OIP-removebg-preview.png" width="160"/>
                         <p>SKM/SPAK</p>
                         <div class="overlay">
