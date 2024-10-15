@@ -52,6 +52,16 @@ html, body {
     align-items: center; /* Center vertically */
 }
 
+#materiModal .modal-body li a {
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease; /* Add transitions for color and font-weight */
+}
+
+#materiModal .modal-body li a:hover {
+    color: #1a3b5d;
+    font-weight: 600;
+}
+
 #materiModal .modal-body li i {
     margin-right: 10px; /* Space between icon and text */
     color: black; /* Optional: change icon color */
@@ -93,6 +103,17 @@ html, body {
     display: flex; /* Align icon and text */
     align-items: center; /* Center vertically */
 }
+
+#materiModal2 .modal-body li a {
+    text-decoration: none;
+    transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease; /* Add transitions for color and font-weight */
+}
+
+#materiModal2 .modal-body li a:hover {
+    color: #1a3b5d;
+    font-weight: 600;
+}
+
 
 #materiModal2 .modal-body li i {
     margin-right: 10px; /* Space between icon and text */
