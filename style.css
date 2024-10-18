@@ -13,9 +13,11 @@ html, body {
 
 * {
     font-family: "Poppins", sans-serif;
+    margin: 0;
+    padding: 0;
 }
 
-#materiModal .modal-dialog {
+.common-modal .modal-dialog {
     color: black;
     display: flex;
     max-width: 700px; /* Adjust this value to make the modal smaller */
@@ -23,99 +25,46 @@ html, body {
     min-height: calc(100% - 5rem); /* Adjusts for responsiveness */
 }
 
-#materiModal .modal-content {
+.common-modal .modal-content {
     border-radius: 10px;
 }
 
-#materiModal .modal-header {
+.common-modal .modal-header {
     color: black;
 }
 
-#materiModal .modal-footer {
+.common-modal .modal-footer {
     border-radius: 10px;
     border-top: none;
 }
 
-#materiModal .modal-body {
+.common-modal .modal-body {
     margin: 5px;
 }
 
-#materiModal .modal-body ul {
+.common-modal .modal-body ul {
     list-style: none;
     padding: 0;
 }
 
-#materiModal .modal-body li {
+.common-modal .modal-body li {
     font-size: 20px;
     margin-bottom: 15px;
     display: flex; /* Align icon and text */
     align-items: center; /* Center vertically */
 }
 
-#materiModal .modal-body li a {
+.common-modal .modal-body li a {
     text-decoration: none;
     transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease; /* Add transitions for color and font-weight */
 }
 
-#materiModal .modal-body li a:hover {
+.common-modal .modal-body li a:hover {
     color: #1a3b5d;
     font-weight: 600;
 }
 
-#materiModal .modal-body li i {
-    margin-right: 10px; /* Space between icon and text */
-    color: black; /* Optional: change icon color */
-}
-
-#materiModal2 .modal-dialog {
-    color: black;
-    display: flex;
-    max-width: 700px; /* Adjust this value to make the modal smaller */
-    align-items: center; 
-    min-height: calc(100% - 5rem); /* Adjusts for responsiveness */
-}
-
-#materiModal2 .modal-content {
-    border-radius: 10px;
-}
-
-#materiModal2 .modal-header {
-    color: black;
-}
-
-#materiModal2 .modal-footer {
-    border-radius: 10px;
-    border-top: none;
-}
-
-#materiModal2 .modal-body {
-    margin: 5px;
-}
-
-#materiModal2 .modal-body ul {
-    list-style: none;
-    padding: 0;
-}
-
-#materiModal2 .modal-body li {
-    font-size: 20px;
-    margin-bottom: 15px;
-    display: flex; /* Align icon and text */
-    align-items: center; /* Center vertically */
-}
-
-#materiModal2 .modal-body li a {
-    text-decoration: none;
-    transition: transform 0.3s ease, color 0.3s ease, font-weight 0.3s ease; /* Add transitions for color and font-weight */
-}
-
-#materiModal2 .modal-body li a:hover {
-    color: #1a3b5d;
-    font-weight: 600;
-}
-
-
-#materiModal2 .modal-body li i {
+.common-modal .modal-body li i {
     margin-right: 10px; /* Space between icon and text */
     color: black; /* Optional: change icon color */
 }
@@ -132,7 +81,7 @@ body {
     color: white;
     margin: 0;
     padding: 0;
-}
+    height: 100vh; /* Memastikan tinggi body 100% dari viewport */}
 
 .container {
     text-align: center;
@@ -173,6 +122,7 @@ a {
 .app-grid {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
+    transition: grid-template-columns 0.5s ease, gap 0.5s ease, padding 0.5s ease;
     gap: 30px;
     justify-content: center;
     padding: 0 20px;
@@ -324,12 +274,14 @@ a {
         justify-content: center;
         gap: 40px;
         padding: 0 16px;
+        transition: grid-template-columns 0.5s ease, gap 0.5s ease, padding 0.5s ease;
     }
 }
 
 @media (max-width: 768px) {
     .app-grid {
         grid-template-columns: repeat(2, minmax(140px, 1fr));
+        transition: grid-template-columns 0.5s ease, gap 0.5s ease, padding 0.5s ease;
         justify-content: center;
         gap: 20px;
         padding: 0 16px;
@@ -354,6 +306,15 @@ a {
     .footer .sitemap ul {
         width: 100%;
         margin-bottom: 20px;
+    }
+    
+    body {
+        background: url(img/bg-web.png) no-repeat center center fixed;
+        background-size: cover; /* Atau 'contain', tergantung kebutuhan */
+        height: 100%; /* Mengatur tinggi otomatis untuk konten */
+        width: 100%;
+        margin: 0;
+        padding: 0;
     }
 }
 
